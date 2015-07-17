@@ -12,10 +12,9 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  %body
-    %header
-      = render 'layouts/navigation'
-    %main{:role => "main"}
-      = render 'layouts/messages'
-      
-      = yield
+  %body{ng: {app: 'MakersNZ'}, layout: "column"}
+    %md-toolbar{ layout: "row" }
+      .md-toolbar-tools
+        %h1 MakersNZ
+    = yield
+  
