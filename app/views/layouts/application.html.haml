@@ -1,8 +1,13 @@
-!!!
-%html
+!!! 5
+%html(lang="en")
   %head
-    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
-    %title= content_for?(:title) ? yield(:title) : 'Nz Makers'
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    = csrf_meta_tags
+    = favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
+
+    %title= content_for?(:title) ? yield(:title) : "NZ Makers Map"
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Nz Makers'}"}
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
@@ -12,4 +17,5 @@
       = render 'layouts/navigation'
     %main{:role => "main"}
       = render 'layouts/messages'
+      
       = yield
