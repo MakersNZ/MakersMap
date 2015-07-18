@@ -5,6 +5,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-angular'
   gem 'rails-assets-angular-material'
   gem 'rails-assets-angular-route'
+  gem 'rails-assets-angular-ui'
 end
 
 source 'https://rubygems.org' do
@@ -41,7 +42,7 @@ source 'https://rubygems.org' do
     gem "factory_girl_rails"
     gem "database_cleaner"
   end
-  
+
   group :production, :staging do
     gem 'puma'
     

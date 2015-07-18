@@ -155,6 +155,7 @@ GEM
       rails-assets-angular-aria
     rails-assets-angular-route (1.4.3)
       rails-assets-angular (= 1.4.3)
+    rails-assets-angular-ui (0.4.0)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.6)
@@ -253,6 +254,7 @@ DEPENDENCIES
   rails-assets-angular!
   rails-assets-angular-material!
   rails-assets-angular-route!
+  rails-assets-angular-ui!
   rails_12factor!
   rails_layout!
   rails_serve_static_assets!
