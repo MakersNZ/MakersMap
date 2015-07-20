@@ -6,16 +6,25 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-angular-material'
   gem 'rails-assets-angular-route'
   gem 'rails-assets-angular-ui'
+
+  gem 'rails-assets-bootstrap'
 end
 
 source 'https://rubygems.org' do
 
   gem 'rails', '4.2.3'
+
+  gem 'activerecord'
+
   gem 'sass-rails', '~> 5.0'
   gem 'uglifier', '>= 1.3.0'
   gem 'coffee-rails', '~> 4.1.0'
   gem 'jquery-rails'
   gem 'jbuilder', '~> 2.0'
+
+  gem 'simple_form'
+
+  gem 'turbolinks'
   group :development, :test do
     gem 'byebug'
     gem 'web-console', '~> 2.0'

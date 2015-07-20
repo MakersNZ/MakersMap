@@ -12,9 +12,44 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  %body{ng: {app: 'MakersNZ'}, layout: "column"}
-    %md-toolbar{ layout: "row" }
-      .md-toolbar-tools
-        %h1 MakersNZ
-    = yield
-  
+  %body
+    .navbar.navbar-default.navbar-static-top
+      .container
+        %button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
+          %span.fa.fa-bar
+          %span.fa.fa-bar
+          %span.fa.fa-bar
+        = link_to root_url, :class => "navbar-brand" do
+          NZ Makers Map
+        .navbar-collapse.collapse.navbar-responsive-collapse
+          %ul.nav.navbar-nav
+            %li
+              = link_to '#' do
+                Places
+                %i.fa.fa-rss
+                
+          %ul.nav.navbar-nav.navbar-right
+            / - if current_user
+            /   %li 
+            /     = link_to current_user do
+            /       %i.fa.fa-user.text-muted
+            /       = current_user.display_name
+
+            /       %i.fa.fa-star
+            /       = "  #{current_user.karma} -"
+
+            /       %i.fa.fa-coins
+            /       0.00 bits
+            / - else
+            /   %li
+            /     = link_to 'login', new_user_session_path
+                  
+                  
+    #main_content{ class: content_for?(:layout_type) ? yield(:layout_type) : 'container', 'ng-app': "collaboTree" }
+      .view-frame.animate-view{ "ng-view": "" }
+        .row{style: 'height: 0'}
+          .col-md-4.pull-right
+            
+        = yield
+        
+      %footer
