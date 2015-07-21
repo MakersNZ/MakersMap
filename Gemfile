@@ -8,6 +8,8 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-angular-ui'
 
   gem 'rails-assets-bootstrap'
+
+  # gem 'rails-assets-google-map'
 end
 
 source 'https://rubygems.org' do
@@ -15,6 +17,11 @@ source 'https://rubygems.org' do
   gem 'rails', '4.2.3'
 
   gem 'activerecord'
+
+  # AR Extensions
+  gem 'activerecord-postgres-earthdistance'
+  gem 'elasticsearch-model'
+  gem 'elasticsearch-rails'
 
   gem 'sass-rails', '~> 5.0'
   gem 'uglifier', '>= 1.3.0'

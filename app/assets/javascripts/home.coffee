@@ -1,5 +1,5 @@
-controllers = angular.module('controllers',[])
+# controllers = angular.module('controllers',[])
 
-controllers.controller "HomeController", ["$scope", "$http", "$routeParams", ($scope, $http, $routeParams) ->
+# controllers.controller "HomeController", ["$scope", "$http", "$routeParams", ($scope, $http, $routeParams) ->
   
-]
+# ]

@@ -1,6 +1,6 @@
-controllers = angular.module('controllers',[])
+# controllers = angular.module('controllers',[])
 
-controllers.controller "UIController", ["$scope", "router",
-  ($scope, router) ->
+# controllers.controller "UIController", ["$scope", "router",
+#   ($scope, router) ->
     
-]
+# ]

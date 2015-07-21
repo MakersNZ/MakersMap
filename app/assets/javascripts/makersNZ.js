@@ -1,5 +1,5 @@
-app = angular.module('MakersNZ', [
-  'ngRoute',
-  'templates',
-  'ngMaterial'
-])
+// app = angular.module('MakersNZ', [
+//   'ngRoute',
+//   'templates',
+//   'ngMaterial'
+// ])

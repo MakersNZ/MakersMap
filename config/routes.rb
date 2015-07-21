@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   devise_for :people
   resources :people
   resources :people
-  root to: 'visitors#index'
+  root to: 'search#index'
 end
