@@ -29,8 +29,13 @@
               = link_to '#' do
                 Places
                 %i.fa.fa-rss
-                
-          %ul.nav.navbar-nav.navbar-right
+          
+          %form.navbar-form.navbar-right{ role: "search" }
+            .form-group.input-group-lg
+              %input.form-control{ type: 'text', placeholder: "Search"}
+
+      
+
                   
     .row
       #map-container.col-md-12     
