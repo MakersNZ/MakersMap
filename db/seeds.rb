@@ -6,4 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Tag.create(name: "Woodworking")
+
+tags = %w( Woodworking CNC UAV Recycling )
+tags.each do |tag|
+  t = Tag.find_or_create_by(name: tag)
+  t.save
+  print '.'
+end
+
+places = [ "AUT CoLab", "Tangleball" ]
+places.each do |place|
+  p = Place.find_or_create_by(name: place)
+  p.save
+  print '.'
+end

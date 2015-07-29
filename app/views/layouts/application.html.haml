@@ -26,13 +26,13 @@
         .navbar-collapse.collapse.navbar-responsive-collapse
           %ul.nav.navbar-nav
             %li
-              = link_to '#' do
+              = link_to places_path do
                 Places
                 %i.fa.fa-rss
-          
-          %form.navbar-form.navbar-right{ role: "search" }
+          = form_for root_url, method: :get, html: { class: "navbar-form navbar-right"} do |f|
             .form-group.input-group-lg
-              %input.form-control{ type: 'text', placeholder: "Search"}
+              %input.form-control{ type: 'text', placeholder: "Search", name: 'q', value: params[:q] }
+              
 
       
 
