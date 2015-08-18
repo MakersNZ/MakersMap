@@ -6,10 +6,7 @@ class Person < ActiveRecord::Base
 
   acts_as_geolocated
   
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+  # store_accessor :data, :name
 
   # has_many :tags, through: :relations, source: :tag, conditions: "relations.type = 'tag'"
   has_and_belongs_to_many :tags, join_table: :relations, class_name: Tag, foreign_key: :thing_id, association_foreign_key: :has_id

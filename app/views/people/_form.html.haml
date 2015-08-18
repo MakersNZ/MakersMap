@@ -2,7 +2,14 @@
   = f.error_notification
 
   .form-inputs
-  /   = f.input :text
+    = f.input 'email'
+
+  = f.simple_fields_for :data do |d|
+    %pre
+      = d.inspect
+    .form-inputs
+      = d.input 'address', as: :text, required: false
+
 
   .form-actions
     = f.button :submit

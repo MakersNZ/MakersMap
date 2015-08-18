@@ -1,8 +1,9 @@
 %p#notice= notice
 
 %p
-  %b Jsonb:
-  = @person.jsonb
+  - @person.data.each_pair do |k,v|
+    %b= k
+    = v
 
 = link_to 'Edit', edit_person_path(@person)
 \|
