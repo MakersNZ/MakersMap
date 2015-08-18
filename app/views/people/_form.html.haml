@@ -5,9 +5,8 @@
     = f.input 'email'
 
   = f.simple_fields_for :data do |d|
-    %pre
-      = d.inspect
     .form-inputs
+      = d.input 'name', as: :string, required: false
       = d.input 'address', as: :text, required: false
 
 
