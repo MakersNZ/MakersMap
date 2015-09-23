@@ -6,6 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Place.__elasticsearch__.create_index! force: true
+Tag.__elasticsearch__.create_index! force: true
+Person.__elasticsearch__.create_index! force: true
+
 
 tags = %w( Woodworking CNC UAV Recycling )
 tags.each do |tag|
