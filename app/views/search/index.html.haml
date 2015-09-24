@@ -3,25 +3,7 @@
     %h2 Results
     .media
       - @results.each do |result|
-        .panel.panel-default
-          .panel-body
-            .media-left.media-middle
-              = link_to result do
-                - if result.is_a? Person
-                  %span.glyphicon.glyphicon-user
-                - elsif result.is_a? Place
-                  %span.glyphicon.glyphicon-map-marker
-
-            .media-body
-              %h4.media-heading
-                = link_to result do
-                  - if result.try :data
-                    - # If it's something that has a data blob
-                    = result.safe_data.name
-                  - else
-                    - # normal thing:
-                    = result.try :name
-              = result.try(:description)
+        = render partial: 'result', locals: { result: result }
 
   .col-md-4
     %h4 Tags

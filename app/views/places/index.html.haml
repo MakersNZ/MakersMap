@@ -1,25 +1,14 @@
-%h1 Listing places
+%h1 Places
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Description
-      %th Latlong
-      %th
-      %th
-      %th
-
-  %tbody
+.row
+  .col-md-8
     - @places.each do |place|
-      %tr
-        %td= place.name
-        %td= place.description
-        %td= place.latlong
-        %td= link_to 'Show', place
-        %td= link_to 'Edit', edit_place_path(place)
-        %td= link_to 'Destroy', place, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      = render partial: 'search/result', locals: { result: place }
+      - if current_user
+        = link_to 'Show', place
+        = link_to 'Edit', edit_place_path(place)
+        = link_to 'Destroy', place, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Place', new_place_path
+= link_to 'Suggest New Place', new_place_path
