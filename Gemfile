@@ -9,7 +9,7 @@ source 'https://rails-assets.org' do
 
   gem 'rails-assets-bootstrap'
 
-  # gem 'rails-assets-google-map'
+  gem 'rails-assets-google-map'
 end
 
 source 'https://rubygems.org' do
@@ -19,7 +19,6 @@ source 'https://rubygems.org' do
   gem 'activerecord'
   # AR Extensions
   gem 'activerecord-postgres-earthdistance'
-
   gem 'elasticsearch-model'
   gem 'elasticsearch-rails'
 
@@ -48,13 +47,13 @@ source 'https://rubygems.org' do
     # Auto test
     gem 'guard-rspec', require: false
     gem 'guard-bundler', require: false
-    
+
   end
   group :development, :test do
     gem 'byebug'
     gem 'web-console', '~> 2.0'
     gem 'spring'
-  
+
     gem 'pry-rails'
     gem 'pry-rescue'
     gem "rspec-rails"
@@ -64,7 +63,7 @@ source 'https://rubygems.org' do
 
   group :production, :staging do
     gem 'puma'
-    
+
     gem "rails_12factor"
     gem "rails_stdout_logging"
     gem "rails_serve_static_assets"
