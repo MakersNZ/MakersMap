@@ -1,6 +1,6 @@
 init_map = ->
   var_location = new (google.maps.LatLng)(-36.8406, 174.74)
-  var_mapoptions = 
+  var_mapoptions =
     center: var_location
     zoom: 11
   var_marker = new (google.maps.Marker)(
@@ -13,7 +13,7 @@ init_map = ->
 
 
 
-ready = ->
+window.ready = ->
   google.maps.event.addDomListener window, 'load', init_map
 
 $(document).ready(ready)
