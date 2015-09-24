@@ -2,7 +2,7 @@ class SearchController < ApplicationController
 
   def index
     if params[:q].blank?
-      @results = Elasticsearch::Model.search( { query: { match_all: {} } }, [Place]).records
+      @results = Elasticsearch::Model.search( { query: { match_all: {} } }, [Place, Person]).records
     else
       @results = Elasticsearch::Model.search(params[:q], [Place]).records
     end

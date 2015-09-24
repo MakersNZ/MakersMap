@@ -11,7 +11,12 @@
             .media-body
               %h4.media-heading
                 = link_to result do
-                  = result.name
+                  - if result.try :data
+                    - # If it's something that has a data blob
+                    = result.safe_data.name
+                  - else
+                    - # normal thing:
+                    = result.try :name
               = result.try(:description)
 
   .col-md-4
