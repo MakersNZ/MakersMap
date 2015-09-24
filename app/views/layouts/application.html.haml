@@ -37,17 +37,18 @@
           = form_for root_url, method: :get, html: { class: "navbar-form navbar-right"} do |f|
             .form-group.input-group-lg
               %input.form-control{ type: 'text', placeholder: "Search", name: 'q', value: params[:q] }
-              
 
-      
 
-                  
+
+
+
     .row
-      #map-container.col-md-12     
+      #map-container.col-md-12
+        #map-canvas
     #main_content{ class: content_for?(:layout_type) ? yield(:layout_type) : 'container' }
       .row{style: 'height: 0'}
         .col-md-4.pull-right
-      .row  
+      .row
         = yield
-        
+
       %footer
