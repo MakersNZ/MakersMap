@@ -51,7 +51,14 @@ This application requires:
 - Install the vbguest plugin by running **vagrant plugin install vagrant-vbguest**
 - Start vagrant with **Vagrant up**
 - Login to VM: **Vagrant ssh**
-- Goto the app and start it: **cd /vagrant/** followed by **rails server -b0.0.0.0**
+- Goto the app: **cd /vagrant/**
+- Install bundler: **gem install bundler"
+- bundle all the gems **bundle**
+- create new database: **rake db:create**
+- run database migrations: **rake db:migrate**
+- seed the starting data: **rake db:seed**
+- Start it: **rails server -b0.0.0.0**
+- Check if it works in your browser [http://localhost:3000](http://localhost:3000)
 
 Documentation and Support
 -------------------------
