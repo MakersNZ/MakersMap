@@ -13,6 +13,7 @@ module Tagable
                 association_foreign_key: :has_id
   end
 
+  # Called by the elasticsearch indexer and should add the tag names
   def as_indexed_json(options={})
     as_json(include: { tags: { only: :name } } )
   end

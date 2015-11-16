@@ -12,6 +12,13 @@ class Person < ActiveRecord::Base
   # Things are related to other things
   has_many :relations, foreign_key: :thing_id
 
+  has_and_belongs_to_many :friends,
+              join_table: :relations,
+              class_name: Person,
+              foreign_key: :thing_id,
+              association_foreign_key: :has_id
+
+
   def self.data_fields
     [
       { name: :name,    type: :string },
