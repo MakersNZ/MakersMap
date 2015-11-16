@@ -347,7 +347,6 @@ DEPENDENCIES
   rails-assets-google-map!
   rails_12factor!
   rails_layout!
-  rails_serve_static_assets!
   rails_stdout_logging!
   rspec-rails!
   sass-rails (~> 5.0)!
