@@ -6,8 +6,8 @@
 
   = f.simple_fields_for :data do |d|
     .form-inputs
-      = d.input 'name', as: :string, required: false, input_html: { value: @person.safe_data.name }
-      = d.input 'address', as: :text, required: false, input_html: { value: @person.safe_data.address }
+    - Person.data_fields.each do |field|
+      = d.input field[:name], as: field[:type], required: false, input_html: { value: @person.safe_data.send(field[:name]) }
 
   = render partial: "tags/association.html", locals: { f: f }
 

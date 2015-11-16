@@ -12,6 +12,15 @@ class Person < ActiveRecord::Base
   # Things are related to other things
   has_many :relations, foreign_key: :thing_id
 
+  def self.data_fields
+    [
+      { name: :name,    type: :string },
+      { name: :bio,     type: :text },
+      { name: :address, type: :text },
+      { name: :phone_number, type: :string }
+    ]
+  end
+
   def safe_data
     OpenStruct.new(data)
   end
