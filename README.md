@@ -12,7 +12,7 @@ This application requires:
 
 - Ruby 2.2.1
 - Rails 4.2.3
-- Postgres
+- Postgres 9.4
 - ElasticSearch
 - Linux or MacOS
 
@@ -35,9 +35,6 @@ This application requires:
 - connect your git with github (skip if done) [https://help.github.com/articles/set-up-git/](https://help.github.com/articles/set-up-git/)
 - checkout project somewhere: `git clone git@github.com:MakersNZ/MakersMap.git`
 - move to project directory: `cd MakersMap`
-- setup rvm for project: `touch .ruby-version; touch .ruby-gemset`
-- edit these new files to specify which ruby version you want (ruby-2.2.1) and which gemset name (maker_map_or_whatever_you_want)
-- let rvm pickup the settings change: `cd .`
 - install bundler `gem install bundler`
 - bundle all the gems `bundle`
 - configure database connection inside: config/database.yml
@@ -47,6 +44,21 @@ This application requires:
 - FIRE UP THE APP `rails server`
 - Check it works in your browser [http://localhost:3000](http://localhost:3000)
 - Make changes, reload browser to see them happen
+
+#####Vagrant
+
+- Install Vagrant and Virtualbox, the steps would depend on your OS.
+- Install the vbguest plugin by running **vagrant plugin install vagrant-vbguest**
+- Start vagrant with **Vagrant up**
+- Login to VM: **Vagrant ssh**
+- Goto the app: **cd /vagrant/**
+- Install bundler: **gem install bundler"
+- bundle all the gems **bundle**
+- create new database: **rake db:create**
+- run database migrations: **rake db:migrate**
+- seed the starting data: **rake db:seed**
+- Start it: **rails server -b0.0.0.0**
+- Check if it works in your browser [http://localhost:3000](http://localhost:3000)
 
 Documentation and Support
 -------------------------
