@@ -16,4 +16,10 @@
           - else
             - # normal thing:
             = result.try :name
+        - if result.try(:tags)
+          .pull-right
+            - result.tags.each do |tag|
+              %span.glyphicon.glyphicon-tag
+              = tag.name
+          
       = result.try(:description)
