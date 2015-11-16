@@ -9,7 +9,7 @@
       = d.input 'name', as: :string, required: false, input_html: { value: @person.safe_data.name }
       = d.input 'address', as: :text, required: false, input_html: { value: @person.safe_data.address }
 
-  = f.association 'tags', input_html: { class: "chosen-select", data: { placeholder: "Select tags for this person" } }
+  = render partial: "tags/association.html", locals: { f: f }
 
   .form-actions
     = f.button :submit

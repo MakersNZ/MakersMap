@@ -14,11 +14,9 @@
           %b Tags
         %td
           - @person.tags.each do |tag|
-            %span.glyphicon.glyphicon-tag
-            = tag.name
+            = render partial: "tags/show_small.html", locals: { tag: tag }
 .row
   .col-md-12
-    = link_to edit_person_path(@person), class: "btn btn-default" do  
+    = link_to edit_person_path(@person), class: "btn btn-default" do
       %span.glyphicon.glyphicon-pencil
       Edit
-   

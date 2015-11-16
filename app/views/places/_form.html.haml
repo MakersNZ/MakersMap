@@ -5,6 +5,7 @@
     = f.input :name
     = f.input :description
     / = f.input :latlong
+    = render partial: "tags/association.html", locals: { f: f }
 
   .form-actions
     = f.button :submit
