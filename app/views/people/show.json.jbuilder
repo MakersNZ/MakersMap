@@ -1,1 +1,1 @@
-json.extract! @person, :id, :jsonb, :created_at, :updated_at
+json.extract! @person, :id, :data, :created_at, :updated_at, :tags
