@@ -1,10 +1,24 @@
 %p#notice= notice
 
-%p
-  - @person.data.each_pair do |k,v|
-    %b= k
-    = v
-
-= link_to 'Edit', edit_person_path(@person)
-\|
-= link_to 'Back', people_path
+.row
+  .col-md-7
+    %table.table
+      - @person.data.each_pair do |k,v|
+        %tr
+          %td
+            %b= k
+          %td
+            = v
+      %tr
+        %td
+          %b Tags
+        %td
+          - @person.tags.each do |tag|
+            %span.glyphicon.glyphicon-tag
+            = tag.name
+.row
+  .col-md-12
+    = link_to edit_person_path(@person), class: "btn btn-default" do  
+      %span.glyphicon.glyphicon-pencil
+      Edit
+   

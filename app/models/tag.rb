@@ -6,4 +6,5 @@ class Tag < ActiveRecord::Base
     
   has_and_belongs_to_many :people, join_table: :relations, class_name: Person, foreign_key: :thing_id, association_foreign_key: :has_id
   
+  
 end

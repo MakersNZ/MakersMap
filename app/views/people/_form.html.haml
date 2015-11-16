@@ -6,9 +6,10 @@
 
   = f.simple_fields_for :data do |d|
     .form-inputs
-      = d.input 'name', as: :string, required: false
-      = d.input 'address', as: :text, required: false
+      = d.input 'name', as: :string, required: false, input_html: { value: @person.safe_data.name }
+      = d.input 'address', as: :text, required: false, input_html: { value: @person.safe_data.address }
 
+  = f.association 'tags', input_html: { class: "chosen-select", data: { placeholder: "Select tags for this person" } }
 
   .form-actions
     = f.button :submit

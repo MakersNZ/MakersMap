@@ -10,6 +10,8 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
 
   gem 'rails-assets-google-map'
+
+  gem 'rails-assets-chosen'
 end
 
 source 'https://rubygems.org' do
@@ -35,7 +37,7 @@ source 'https://rubygems.org' do
   gem 'jquery-rails'
   gem 'jbuilder', '~> 2.0'
 
-  gem 'angular-rails-templates'
+  # gem 'angular-rails-templates'
 
   group :development do
     gem 'better_errors'
