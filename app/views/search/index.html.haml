@@ -8,6 +8,4 @@
   .col-md-4
     %h4 Tags
     - @tags.each do |tag|
-      = link_to tag, class: "btn btn-default" do
-        %span.glyphicon.glyphicon-tag
-        = tag.name
+      = render partial: "tags/show_small.html", locals: { tag: tag }

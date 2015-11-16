@@ -21,7 +21,6 @@
         - if result.tags
           .pull-right
             - result.tags.each do |tag|
-              %span.glyphicon.glyphicon-tag
-              = tag.name
+              = render partial: "tags/show_small.html", locals: { tag: tag }
 
       = result.try(:description)

@@ -1,2 +1,3 @@
-%span.glyphicon.glyphicon-tag
-= tag.name
+= link_to root_url(q: tag.name), class: "btn btn-default" do  
+  %span.glyphicon.glyphicon-tag
+  = tag.name
