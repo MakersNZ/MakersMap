@@ -4,6 +4,9 @@ addons:
 services:
   - postgresql
 
+notifications:
+  slack: makersnz:avpePc6XRMsveWDNwpXZ6yCv
+
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
   - cp config/database.yml.travis config/database.yml
