@@ -1,7 +1,10 @@
 Nz Makers
 ================
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+[![Build Status](https://img.shields.io/travis/MakersNZ/MakersMap.svg)](https://travis-ci.org/MakersNZ/MakersMap)
+[![Code Climate](https://img.shields.io/codeclimate/github/MakersNZ/MakersMap.svg)](https://codeclimate.com/github/MakersNZ/MakersMap)
+[![Dependency Status](https://img.shields.io/gemnasium/MakersNZ/MakersMap.svg)](https://gemnasium.com/MakersNZ/MakersMap)
+
 
 Generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem.
 
@@ -72,7 +75,7 @@ We are unique like a snowflake.
 
 Contributing
 ------------
-Please fork the repo to your own github account, make a new branch for your feature/changes and then make a pull request to have it merged back into this repo. 
+Please fork the repo to your own github account, make a new branch for your feature/changes and then make a pull request to have it merged back into this repo.
 
 Credits
 -------
