@@ -37,6 +37,7 @@ source 'https://rubygems.org' do
   gem 'jquery-rails'
   gem 'jbuilder', '~> 2.0'
 
+  gem 'newrelic_rpm'
   # gem 'angular-rails-templates'
 
   group :development do
