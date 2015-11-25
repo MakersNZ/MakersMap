@@ -66,6 +66,8 @@ This application requires:
 Documentation and Support
 -------------------------
 
+To refresh the ElasticSearch Index, run `rake refresh_es`
+
 Issues
 -------------
 
@@ -82,3 +84,5 @@ Credits
 
 License
 -------
+
+Double Rainbow
