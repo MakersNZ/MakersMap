@@ -13,7 +13,7 @@
 #= require jquery
 #= require jquery_ujs
 #= require chosen
-
+#= require leaflet
 #= require bootstrap
 
 #= require_tree .

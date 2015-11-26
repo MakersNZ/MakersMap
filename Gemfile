@@ -24,6 +24,8 @@ source 'https://rubygems.org' do
   gem 'kaminari', '0.14.1'
   gem 'bootstrap-kaminari-views'
 
+  # mapping
+  gem 'leaflet-rails'
 
   # AR Extensions
   gem 'activerecord-postgres-earthdistance'

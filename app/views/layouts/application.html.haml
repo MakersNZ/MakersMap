@@ -16,8 +16,6 @@
     = javascript_include_tag "//cdn.jsdelivr.net/editor/0.1.0/editor.js"
     = javascript_include_tag "//cdn.jsdelivr.net/editor/0.1.0/marked.js"
 
-    %script{ src: "//maps.google.com/maps/api/js?sensor=true&key=#{ENV['GOOGLE_MAP_API_KEY']}" }
-
     = csrf_meta_tags
   %body
     .navbar.navbar-default.navbar-static-top
@@ -45,10 +43,10 @@
 
 
 
+    #container-fluid
+      .row
+        #map-container.col-md-12
 
-    .row
-      #map-container.col-md-12
-        #map-canvas
     #main_content{ class: content_for?(:layout_type) ? yield(:layout_type) : 'container' }
       .row{style: 'height: 0'}
         .col-md-4.pull-right

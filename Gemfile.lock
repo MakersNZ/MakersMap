@@ -145,6 +145,7 @@ GEM
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    leaflet-rails (0.7.4)
     listen (3.0.5)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -338,6 +339,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)!
   jquery-rails!
   kaminari (= 0.14.1)!
+  leaflet-rails!
   newrelic_rpm!
   pg!
   pry-rails!
