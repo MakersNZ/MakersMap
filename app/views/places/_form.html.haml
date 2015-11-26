@@ -7,5 +7,11 @@
     / = f.input :latlong
     = render partial: "tags/association.html", locals: { f: f }
 
+    = f.simple_fields_for :data do |d|
+      .form-inputs
+        - Place.data_fields.each do |field|
+          = d.input field[:name], as: field[:type], required: false, input_html: { value: @place.safe_data.send(field[:name]) }
+
+
   .form-actions
     = f.button :submit

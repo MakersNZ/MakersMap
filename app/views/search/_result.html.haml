@@ -10,7 +10,7 @@
     .media-body
       %h4.media-heading
         = link_to result do
-          - if result.try :data
+          - if result.try(:data) && result.safe_data.name
             - # If it's something that has a data blob
             = result.safe_data.name
           - else
@@ -25,4 +25,4 @@
 
       - if result.try(:description)
         %p
-          = markdown(result.description).html_safe 
+          = markdown(result.description).html_safe

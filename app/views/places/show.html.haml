@@ -4,6 +4,14 @@
   = @place.name
 %p
   = markdown(@place.description).html_safe
+
+%table.table
+  - @place.data.each_pair do |k,v|
+    %tr
+      %td
+        %b= k
+      %td
+        = v
 %p
   %b location:
   = @place.latlong

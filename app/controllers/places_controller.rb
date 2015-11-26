@@ -69,6 +69,6 @@ class PlacesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def place_params
-      params.require(:place).permit(:name, :description, :latlong, tag_ids: [])
+      params.require(:place).permit! # TODO: work out a way of having param whitelist (:name, :description, :latlong, tag_ids: [])
     end
 end
