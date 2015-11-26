@@ -25,6 +25,7 @@ source 'https://rubygems.org' do
   gem 'elasticsearch-rails'
 
 
+  gem 'redcarpet'
   gem 'haml-rails'
   gem 'turbolinks'
   gem 'simple_form'

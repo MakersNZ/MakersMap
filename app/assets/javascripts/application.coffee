@@ -26,6 +26,11 @@ exports = MakerMap
 
 MakerMap.setup = () ->
   $(".chosen-select").chosen()
+
+  # Bring online fancy markdown editor
+  editor = new Editor()
+  editor.render()
+
   return
 
 

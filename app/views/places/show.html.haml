@@ -1,17 +1,14 @@
 %p#notice= notice
 
-%p
-  %b Name:
+%h3
   = @place.name
 %p
-  %b Description:
-  = @place.description
+  = markdown(@place.description).html_safe
 %p
-  %b Latlong:
+  %b location:
   = @place.latlong
 
 %p
-  %b Tags
   - @place.tags.each do |tag|
     = render partial: "tags/show_small.html", locals: { tag: tag }
 = link_to edit_place_path(@place), class: "btn btn-default" do
