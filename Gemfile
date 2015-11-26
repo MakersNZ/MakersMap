@@ -19,6 +19,12 @@ source 'https://rubygems.org' do
   gem 'rails', '4.2.3'
   gem 'pg'
   gem 'activerecord'
+
+  # Pagination
+  gem 'kaminari', '0.14.1'
+  gem 'bootstrap-kaminari-views'
+
+
   # AR Extensions
   gem 'activerecord-postgres-earthdistance'
   gem 'elasticsearch-model'

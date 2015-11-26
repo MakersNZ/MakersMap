@@ -4,7 +4,7 @@
     .media
       - @results.each do |result|
         = render partial: 'result', locals: { result: result }
-
+    = paginate @results, :theme => 'twitter-bootstrap-3'
   .col-md-4
     %h4 Tags
     - @tags.each do |tag|
