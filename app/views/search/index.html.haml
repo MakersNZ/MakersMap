@@ -17,6 +17,6 @@
   L.tileLayer('http://b.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18
   }).addTo(map);
 
-  - @results.each do |r|
+  - @all_results.each do |r|
     - next unless r.latlong
     L.marker(#{r.latlong}).addTo(map);
