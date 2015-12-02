@@ -9,3 +9,14 @@
     %h4 Tags
     - @tags.each do |tag|
       = render partial: "tags/show_small.html", locals: { tag: tag }
+
+%script
+  var map;
+  map = L.map('map-container').setView([-36.8406, 174.74], 12);
+
+  L.tileLayer('http://b.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18
+  }).addTo(map);
+
+  - @results.each do |r|
+    - next unless r.latlong
+    L.marker(#{r.latlong}).addTo(map);

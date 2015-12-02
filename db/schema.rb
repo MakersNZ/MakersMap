@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151126002549) do
+ActiveRecord::Schema.define(version: 20151201025021) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20151126002549) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
+    t.point    "latlong"
   end
 
   add_index "people", ["email"], name: "index_people_on_email", unique: true, using: :btree
@@ -47,7 +48,7 @@ ActiveRecord::Schema.define(version: 20151126002549) do
   create_table "relations", force: :cascade do |t|
     t.integer  "thing_id"
     t.integer  "has_id"
-    t.string   "type"
+    t.string   "thing_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
