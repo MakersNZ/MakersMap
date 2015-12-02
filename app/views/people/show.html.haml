@@ -15,6 +15,11 @@
         %td
           - @person.tags.each do |tag|
             = render partial: "tags/show_small.html", locals: { tag: tag }
+
+%p
+  %b location:
+  = @person.latlong
+
 .row
   .col-md-12
     = link_to edit_person_path(@person), class: "btn btn-default" do

@@ -26,6 +26,7 @@ source 'https://rubygems.org' do
 
   # mapping
   gem 'leaflet-rails'
+  gem 'geocoder'
 
   # AR Extensions
   gem 'activerecord-postgres-earthdistance'

@@ -6,6 +6,7 @@ class Person < ActiveRecord::Base
   include Elasticsearch::Model::Callbacks
 
   include Tagable
+  include Geocodeable
 
   acts_as_geolocated
 
