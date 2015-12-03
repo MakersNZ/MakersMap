@@ -5,7 +5,13 @@
   L.tileLayer('http://b.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18
   }).addTo(map);
 
+  var person = L.divIcon({className: 'person-icon', html: '<span class="glyphicon glyphicon-user"></span>'});
+
   - @all_results.each do |r|
     - next if r.latlong.blank?
-    marker = L.marker(#{r.latlong}).addTo(map);
+
+    - if r.is_a? Person
+      marker = L.marker(#{r.latlong}, {icon: person}).addTo(map);
+    - else
+      marker = L.marker(#{r.latlong}).addTo(map);
     marker.bindPopup("#{ j render(partial: "result", locals: { result: r, map: true }) }");
