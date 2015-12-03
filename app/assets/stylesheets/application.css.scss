@@ -43,3 +43,11 @@
     color: #7C8B78;
   }
 }
+
+
+.search-result-body
+{
+  text-overflow: ellipsis;
+  max-height: 25em;
+  overflow: hidden;
+}
