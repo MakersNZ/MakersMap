@@ -32,4 +32,8 @@ class Person < ActiveRecord::Base
   def safe_data
     OpenStruct.new(data)
   end
+
+  def name
+    safe_data.name
+  end
 end

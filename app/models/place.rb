@@ -17,4 +17,14 @@ class Place < ActiveRecord::Base
   def safe_data
     OpenStruct.new(data)
   end
+
+  # Just the plaintext of the description
+  def description_text
+    # TODO
+  end
+
+  def description_html
+    rc = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
+    rc.render(description)
+  end
 end

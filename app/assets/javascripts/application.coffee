@@ -28,8 +28,9 @@ MakerMap.setup = () ->
   $(".chosen-select").chosen()
 
   # Bring online fancy markdown editor
-  editor = new Editor()
-  editor.render()
+  if $("textarea").length > 0
+    editor = new Editor()
+    editor.render()
 
   return
 

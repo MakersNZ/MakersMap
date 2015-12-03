@@ -10,6 +10,7 @@ class PlacesController < ApplicationController
   # GET /places/1
   # GET /places/1.json
   def show
+    @all_results = [@place]
   end
 
   # GET /places/new

@@ -1,0 +1,11 @@
+%script
+  var map;
+  map = L.map('map-container').setView([-36.8406, 174.74], 12);
+
+  L.tileLayer('http://b.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18
+  }).addTo(map);
+
+  - @all_results.each do |r|
+    - next if r.latlong.blank?
+    marker = L.marker(#{r.latlong}).addTo(map);
+    marker.bindPopup("#{ j render(partial: "result", locals: { result: r, map: true }) }");
