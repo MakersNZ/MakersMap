@@ -14,4 +14,4 @@
       marker = L.marker(#{r.latlong}, {icon: person}).addTo(map);
     - else
       marker = L.marker(#{r.latlong}).addTo(map);
-    marker.bindPopup("#{ j render(partial: "result", locals: { result: r, map: true }) }");
+    marker.bindPopup("#{ j render(partial: "search/result", locals: { result: r, map: true }) }");
