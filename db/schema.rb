@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 20151212040625) do
   create_table "relations", force: :cascade do |t|
     t.integer  "thing_id"
     t.integer  "has_id"
-    t.string   "thing_type"
+    t.string   "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
