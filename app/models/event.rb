@@ -1,4 +1,4 @@
-class Place < ActiveRecord::Base
+class Event < ActiveRecord::Base
   include MakerThing
 
   def self.data_fields

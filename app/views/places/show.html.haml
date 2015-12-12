@@ -1,25 +1,7 @@
 %p#notice= notice
 
-%h3
-  = @place.name
-%p
-  = markdown(@place.description).html_safe
+= render partial: "maker_thing/show", locals: { maker_thing: @place }
 
-%table.table
-  - @place.data.each_pair do |k,v|
-    %tr
-      %td
-        %b= k
-      %td
-        = v
-
-%p
-  %b location:
-  = @place.latlong
-
-%p
-  - @place.tags.each do |tag|
-    = render partial: "tags/show_small.html", locals: { tag: tag }
 = link_to edit_place_path(@place), class: "btn btn-default" do
   %span.glyphicon.glyphicon-pencil
   Edit

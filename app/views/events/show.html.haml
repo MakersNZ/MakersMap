@@ -1,0 +1,5 @@
+%p#notice= notice
+
+= render partial: "maker_thing/show", locals: { maker_thing: @event }
+
+= link_to 'Edit', edit_event_path(@event)

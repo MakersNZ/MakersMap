@@ -36,6 +36,10 @@
               = link_to people_path do
                 People
                 %span.glyphicon.glyphicon-user
+            %li
+              = link_to events_path do
+                Events
+                %span.glyphicon.glyphicon-calendar
           = form_for root_url, method: :get, html: { class: "navbar-form navbar-right"} do |f|
             .form-group.input-group-lg
               %input.form-control{ type: 'text', placeholder: "Search", name: 'q', value: params[:q] }

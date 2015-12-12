@@ -1,24 +1,5 @@
 %p#notice= notice
-
-.row
-  .col-md-7
-    %table.table
-      - @person.data.each_pair do |k,v|
-        %tr
-          %td
-            %b= k
-          %td
-            = v
-      %tr
-        %td
-          %b Tags
-        %td
-          - @person.tags.each do |tag|
-            = render partial: "tags/show_small.html", locals: { tag: tag }
-
-%p
-  %b location:
-  = @person.latlong
+= render partial: "maker_thing/show", locals: { maker_thing: @person }
 
 .row
   .col-md-12

@@ -1,0 +1,23 @@
+%h3
+  = maker_thing.name
+
+- if maker_thing.try(:description)
+  %p
+    = markdown(maker_thing.description).html_safe
+
+- if maker_thing.data
+  %table.table
+    - maker_thing.data.each_pair do |k,v|
+      %tr
+        %td
+          %b= k
+        %td
+          = v
+
+%p
+  %b location:
+  = maker_thing.latlong
+
+%p
+  - maker_thing.tags.each do |tag|
+    = render partial: "tags/show_small.html", locals: { tag: tag }
