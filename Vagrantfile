@@ -12,6 +12,11 @@ Vagrant.configure('2') do |config|
   config.vm.network :forwarded_port, guest: 3000, host: 3000
   #config.vm.network :forwarded_port, guest: 9200, host: 9200
 
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 1024
+    v.cpus = 1
+  end
+
   config.vm.provision :shell, path: 'bootstrap/bootstrap.sh', keep_color: true
   config.vm.provision :shell, path: "bootstrap/install-rvm.sh", args: "stable", privileged: false
   config.vm.provision :shell, path: "bootstrap/install-ruby.sh", args: "2.2.1 ", privileged: false
