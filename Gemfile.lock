@@ -1,5 +1,4 @@
 GEM
-  remote: https://rails-assets.org/
   remote: https://rubygems.org/
   specs:
     actionmailer (4.2.3)
@@ -52,6 +51,7 @@ GEM
     bootstrap-kaminari-views (0.0.5)
       kaminari (>= 0.13)
       rails (>= 3.1)
+    bower-rails (0.10.0)
     builder (3.2.2)
     byebug (8.2.0)
     coderay (1.1.0)
@@ -196,40 +196,6 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.3)
       sprockets-rails
-    rails-assets-GoogleWebComponents--google-apis (1.1.3)
-      rails-assets-Polymer--polymer (>= 1.0.0, < 2)
-      rails-assets-PolymerElements--iron-jsonp-library (>= 1.0.0, < 2)
-    rails-assets-Polymer--polymer (1.2.3)
-      rails-assets-webcomponentsjs (>= 0.7.18, < 0.8)
-    rails-assets-PolymerElements--iron-jsonp-library (1.0.4)
-      rails-assets-Polymer--polymer (>= 1.0.0, < 2)
-    rails-assets-PolymerElements--iron-resizable-behavior (1.0.2)
-      rails-assets-Polymer--polymer (>= 1.0.0, < 2)
-    rails-assets-PolymerElements--iron-selector (1.0.8)
-      rails-assets-Polymer--polymer (>= 1.2.0, < 2)
-    rails-assets-angular (1.4.8)
-    rails-assets-angular-animate (1.4.8)
-      rails-assets-angular (= 1.4.8)
-    rails-assets-angular-aria (1.4.8)
-      rails-assets-angular (= 1.4.8)
-    rails-assets-angular-material (0.11.4)
-      rails-assets-angular
-      rails-assets-angular-animate
-      rails-assets-angular-aria
-    rails-assets-angular-route (1.4.8)
-      rails-assets-angular (= 1.4.8)
-    rails-assets-angular-ui (0.4.0)
-    rails-assets-bootstrap (3.3.6)
-      rails-assets-jquery (>= 1.9.1, < 3)
-    rails-assets-chosen (1.4.2)
-      rails-assets-jquery (>= 1.4.4)
-    rails-assets-google-map (1.1.7)
-      rails-assets-GoogleWebComponents--google-apis (>= 1.1.1, < 2)
-      rails-assets-Polymer--polymer (>= 1.2.3, < 2)
-      rails-assets-PolymerElements--iron-resizable-behavior (>= 1.0.0, < 2)
-      rails-assets-PolymerElements--iron-selector (>= 1.0.5, < 2)
-    rails-assets-jquery (2.1.4)
-    rails-assets-webcomponentsjs (0.7.18)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -325,6 +291,7 @@ DEPENDENCIES
   activerecord-postgres-earthdistance!
   better_errors!
   bootstrap-kaminari-views!
+  bower-rails (~> 0.10.0)!
   byebug!
   coffee-rails (~> 4.1.0)!
   database_cleaner!
@@ -349,13 +316,6 @@ DEPENDENCIES
   puma!
   quiet_assets!
   rails (= 4.2.3)!
-  rails-assets-angular!
-  rails-assets-angular-material!
-  rails-assets-angular-route!
-  rails-assets-angular-ui!
-  rails-assets-bootstrap!
-  rails-assets-chosen!
-  rails-assets-google-map!
   rails_12factor!
   rails_layout!
   rails_stdout_logging!

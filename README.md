@@ -40,6 +40,9 @@ This application requires:
 - move to project directory: `cd MakersMap`
 - install bundler `gem install bundler`
 - bundle all the gems `bundle`
+- install npm
+- install bower `npm install bower`
+- install js dependencies with bower `bower install`
 - configure database connection inside: config/database.yml
 - create new database: `rake db:create`
 - run database migrations `rake db:migrate`

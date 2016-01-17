@@ -1,24 +1,13 @@
 ruby '2.2.1'
 
-# Assets
-source 'https://rails-assets.org' do
-  gem 'rails-assets-angular'
-  gem 'rails-assets-angular-material'
-  gem 'rails-assets-angular-route'
-  gem 'rails-assets-angular-ui'
-
-  gem 'rails-assets-bootstrap'
-
-  gem 'rails-assets-google-map'
-
-  gem 'rails-assets-chosen'
-end
-
 source 'https://rubygems.org' do
-
   gem 'rails', '4.2.3'
   gem 'pg'
   gem 'activerecord'
+
+  # Assets
+  gem "bower-rails", "~> 0.10.0"
+
 
   # Pagination
   gem 'kaminari', '0.14.1'
