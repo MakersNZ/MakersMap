@@ -42,7 +42,7 @@ This application requires:
 - bundle all the gems `bundle`
 - install npm
 - install bower `npm install bower`
-- install js dependencies with bower `bower install`
+- install js dependencies with bower `rake bower:install`
 - configure database connection inside: config/database.yml
 - create new database: `rake db:create`
 - run database migrations `rake db:migrate`
@@ -84,6 +84,7 @@ Please fork the repo to your own github account, make a new branch for your feat
 
 Credits
 -------
+
 
 License
 -------
