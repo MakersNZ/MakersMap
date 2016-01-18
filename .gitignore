@@ -22,7 +22,6 @@ db/*.sqlite3
 /tmp/*
 
 # various artifacts
-/bower_components/
 **.war
 *.rbc
 *.sassc
