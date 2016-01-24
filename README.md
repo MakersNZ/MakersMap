@@ -89,4 +89,4 @@ Credits
 License
 -------
 
-Double Rainbow
+GNU Affero General Public License v3 [https://tldrlegal.com/license/gnu-affero-general-public-license-v3-(agpl-3.0)](AGPL-3.0)
