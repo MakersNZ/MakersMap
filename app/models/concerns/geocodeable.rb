@@ -7,7 +7,6 @@ module Geocodeable
 
   included do
     geocoded_by :address do |obj,results|
-      puts results.inspect
       if geo = results.first
         obj.latlong = [geo.latitude, geo.longitude]
       end
