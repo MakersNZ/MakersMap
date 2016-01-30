@@ -1,17 +1,28 @@
 %script
-  var map;
-  map = L.map('map-container').setView([-36.8406, 174.74], 12);
+  var TILE_URL_TEMPLATE = 'http://b.tile.openstreetmap.org/{z}/{x}/{y}.png';
+  var NEW_ZEALAND_CENTER = [-42, 174];
+  var DEFAULT_ZOOM = 5;
+  var MAX_ZOOM = 18;
+  var MARKER_BOUNDS_PADDING = [20, 20];
 
-  L.tileLayer('http://b.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18
-  }).addTo(map);
+  var map = L.map('map-container').setView(NEW_ZEALAND_CENTER, DEFAULT_ZOOM);
 
-  var person = L.divIcon({className: 'person-icon', html: '<span class="glyphicon glyphicon-user"></span>'});
+  var tileLayer = L.tileLayer(TILE_URL_TEMPLATE, { maxZoom: MAX_ZOOM })
+  tileLayer.addTo(map);
 
-  - @all_results.each do |r|
-    - next if r.latlong.blank?
+  var personIcon = L.divIcon({className: 'person-icon', html: '<span class="glyphicon glyphicon-user"></span>'});
 
+  var markers = [];
+
+  - @all_results.select(&:latlong?).each do |r|
     - if r.is_a? Person
-      marker = L.marker(#{r.latlong}, {icon: person}).addTo(map);
+      var marker = L.marker(#{r.latlong}, {icon: personIcon});
     - else
-      marker = L.marker(#{r.latlong}).addTo(map);
+      var marker = L.marker(#{r.latlong});
+
+    marker.addTo(map);
     marker.bindPopup("#{ j render(partial: "search/result", locals: { result: r, map: true }) }");
+    markers.push(marker);
+
+  var group = new L.featureGroup(markers);
+  map.fitBounds(group.getBounds(), { padding: MARKER_BOUNDS_PADDING });
