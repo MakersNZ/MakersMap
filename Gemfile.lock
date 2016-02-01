@@ -40,6 +40,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    addressable (2.4.0)
     arel (6.0.3)
     bcrypt (3.1.10)
     better_errors (2.1.1)
@@ -54,6 +55,15 @@ GEM
     bower-rails (0.10.0)
     builder (3.2.2)
     byebug (8.2.0)
+    capybara (2.6.2)
+      addressable
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
+    childprocess (0.5.9)
+      ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -245,6 +255,7 @@ GEM
     rspec-support (3.4.1)
     ruby_parser (3.7.2)
       sexp_processor (~> 4.1)
+    rubyzip (1.1.7)
     sass (3.4.19)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -252,6 +263,11 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    selenium-webdriver (2.50.0)
+      childprocess (~> 0.5)
+      multi_json (~> 1.0)
+      rubyzip (~> 1.0)
+      websocket (~> 1.0)
     sexp_processor (4.6.0)
     shellany (0.0.1)
     simple_form (3.2.0)
@@ -282,6 +298,9 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    websocket (1.2.2)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
@@ -293,6 +312,7 @@ DEPENDENCIES
   bootstrap-kaminari-views!
   bower-rails (~> 0.10.0)!
   byebug!
+  capybara!
   coffee-rails (~> 4.1.0)!
   database_cleaner!
   devise!
@@ -322,6 +342,7 @@ DEPENDENCIES
   redcarpet!
   rspec-rails!
   sass-rails (~> 5.0)!
+  selenium-webdriver!
   simple_form!
   spring!
   turbolinks!
@@ -329,4 +350,4 @@ DEPENDENCIES
   web-console (~> 2.0)!
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
