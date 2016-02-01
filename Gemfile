@@ -63,6 +63,11 @@ source 'https://rubygems.org' do
     gem "database_cleaner"
   end
 
+  group :test do
+    gem 'selenium-webdriver'
+    gem 'capybara'
+  end
+
   group :production, :staging do
     gem 'puma'
 
