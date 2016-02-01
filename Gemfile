@@ -1,7 +1,7 @@
 ruby '2.2.1'
 
 source 'https://rubygems.org' do
-  gem 'rails', '4.2.3'
+  gem 'rails', '~>4.2.3'
   gem 'pg'
   gem 'activerecord'
 
