@@ -39,6 +39,7 @@ source 'https://rubygems.org' do
 
   gem 'sass-rails'
   gem 'less-rails'
+  gem "twitter-bootstrap-rails"
 
   group :development do
     gem 'better_errors'
