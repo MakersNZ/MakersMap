@@ -1,7 +1,6 @@
 # A sample Bowerfile
 # Check out https://github.com/42dev/bower-rails#ruby-dsl-configuration for more options
 
-assets_path "assets/components"
 
 asset 'chosen'
 asset 'bootstrap'

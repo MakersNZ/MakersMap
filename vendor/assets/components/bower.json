@@ -1,8 +1,0 @@
-{
-  "name": "dsl-generated dependencies",
-  "dependencies": {
-    "chosen": "latest",
-    "bootstrap": "latest",
-    "leaflet": "latest"
-  }
-}

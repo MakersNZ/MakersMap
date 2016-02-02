@@ -30,14 +30,15 @@ source 'https://rubygems.org' do
 
   gem 'devise'
 
-  gem 'sass-rails', '~> 5.0'
+
   gem 'uglifier', '>= 1.3.0'
-  gem 'coffee-rails', '~> 4.1.0'
   gem 'jquery-rails'
   gem 'jbuilder', '~> 2.0'
 
   gem 'newrelic_rpm'
-  # gem 'angular-rails-templates'
+
+  gem 'sass-rails'
+  gem 'less-rails'
 
   group :development do
     gem 'better_errors'
@@ -66,6 +67,11 @@ source 'https://rubygems.org' do
   group :test do
     gem 'selenium-webdriver'
     gem 'capybara'
+  end
+
+  group :assets do
+    gem 'therubyracer'
+    gem 'coffee-rails'
   end
 
   group :production, :staging do
