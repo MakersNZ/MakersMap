@@ -1,11 +1,11 @@
 .panel.panel-default
-  .panel-body.search-result-body
-    .media-left.media-middle
-      = link_to result do
+  .panel-body.media
+    .media-left.pull-left
+      = link_to result, class: 'media-object' do
         - if result.is_a? Person
-          %span.glyphicon.glyphicon-user
+          %span.glyphicon.glyphicon-user.media-object
         - elsif result.is_a? Place
-          %span.glyphicon.glyphicon-map-marker
+          %span.glyphicon.glyphicon-map-marker.media-object
 
     .media-body
       %h4.media-heading
