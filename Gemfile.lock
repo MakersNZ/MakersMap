@@ -344,7 +344,6 @@ DEPENDENCIES
   jquery-rails!
   kaminari (= 0.14.1)!
   leaflet-rails!
-  less-rails!
   newrelic_rpm!
   pg!
   pry-rails!

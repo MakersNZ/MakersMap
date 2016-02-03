@@ -38,7 +38,6 @@ source 'https://rubygems.org' do
   gem 'newrelic_rpm'
 
   gem 'sass-rails'
-  gem 'less-rails'
   gem "twitter-bootstrap-rails"
 
   group :development do
