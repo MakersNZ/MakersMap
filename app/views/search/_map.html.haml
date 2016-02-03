@@ -2,7 +2,8 @@
   var TILE_URL_TEMPLATE = 'http://b.tile.openstreetmap.org/{z}/{x}/{y}.png';
   var NEW_ZEALAND_CENTER = [-42, 174];
   var DEFAULT_ZOOM = 5;
-  var MAX_ZOOM = 13;
+  var MAX_ZOOM = 18;
+  var RESULT_MAX_ZOOM = 13;
   var MARKER_BOUNDS_PADDING = [20, 20];
 
   var map = L.map('map-container').setView(NEW_ZEALAND_CENTER, DEFAULT_ZOOM);
@@ -25,4 +26,4 @@
     markers.push(marker);
 
   var group = new L.featureGroup(markers);
-  map.fitBounds(group.getBounds(), { padding: MARKER_BOUNDS_PADDING, maxZoom: MAX_ZOOM });
+  map.fitBounds(group.getBounds(), { padding: MARKER_BOUNDS_PADDING, maxZoom: RESULT_MAX_ZOOM });
