@@ -71,7 +71,6 @@ source 'https://rubygems.org' do
   end
 
   group :assets do
-    gem 'therubyracer'
     gem 'coffee-rails'
   end
 
